@@ -1,0 +1,8 @@
+.ultralytics/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+data/captures/*.jpg
+data/captures/*.jpeg
+data/captures/*.png
