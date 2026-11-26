@@ -342,6 +342,9 @@ def clear_logs(
     if captures_path.is_dir():
         for file_path in captures_path.iterdir():
             if file_path.is_file() and file_path.suffix.lower() in {".jpg", ".jpeg", ".png"}:
-                file_path.unlink(missing_ok=True)
+                try:
+                    file_path.unlink(missing_ok=True)
+                except OSError:
+                    pass
 
     return cleared_count
